@@ -14,7 +14,7 @@ Open the starter project in the latest stable version of Android Studio.
 
 Open the starter project in Android Studio
 
-##Steps
+## Steps
 
 1. Open the starter project in Android Studio
 
