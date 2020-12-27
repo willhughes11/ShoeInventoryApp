@@ -18,5 +18,23 @@
         android:id="@+id/welcome_fragment"
         android:name="com.example.shoestore.screens.welcome.WelcomeFragment"
         android:label="welcome_fragment"
-        tools:layout="@layout/welcome_fragment" />
+        tools:layout="@layout/welcome_fragment" >
+        <action
+            android:id="@+id/action_welcome_fragment_to_instructionsFragment"
+            app:destination="@id/instructions_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructions_fragment"
+        android:name="com.example.shoestore.screens.instructions.InstructionsFragment"
+        android:label="instructions_fragment"
+        tools:layout="@layout/instructions_fragment" >
+        <action
+            android:id="@+id/action_instructions_fragment_to_shoeListingsFragment"
+            app:destination="@id/shoe_listings_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoe_listings_fragment"
+        android:name="com.example.shoestore.screens.shoe_listings.ShoeListingsFragment"
+        android:label="shoe_listings_fragment"
+        tools:layout="@layout/shoe_listings_fragment" />
 </navigation>
