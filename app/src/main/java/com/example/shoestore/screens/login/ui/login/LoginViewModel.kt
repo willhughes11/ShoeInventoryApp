@@ -4,10 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
+import com.example.shoestore.R
 import com.example.shoestore.screens.login.data.LoginRepository
 import com.example.shoestore.screens.login.data.Result
-
-import com.example.shoestore.screens.login.R
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 
