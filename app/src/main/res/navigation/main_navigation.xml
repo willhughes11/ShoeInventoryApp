@@ -20,7 +20,7 @@
         android:label="welcome_fragment"
         tools:layout="@layout/welcome_fragment" >
         <action
-            android:id="@+id/action_welcome_fragment_to_instructionsFragment"
+            android:id="@+id/action_welcome_to_instructions"
             app:destination="@id/instructions_fragment" />
     </fragment>
     <fragment
@@ -29,7 +29,7 @@
         android:label="instructions_fragment"
         tools:layout="@layout/instructions_fragment" >
         <action
-            android:id="@+id/action_instructions_fragment_to_shoeListingsFragment"
+            android:id="@+id/action_instructions_to_shoe_listings"
             app:destination="@id/shoe_listings_fragment" />
     </fragment>
     <fragment
