@@ -8,7 +8,9 @@
             name="instructionsViewModel"
             type="com.example.shoestore.screens.instructions.InstructionsFragment" />
     </data>
-    
+
+    <!-- Constraint Layout because I prefer to have the items place set in place but still adjust with the size of the screen -->
+
 <androidx.constraintlayout.widget.ConstraintLayout 
     android:id="@+id/instructions_constraint_layout"
     android:layout_width="match_parent"

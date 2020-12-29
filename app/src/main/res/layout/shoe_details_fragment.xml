@@ -4,9 +4,14 @@
 
     <data>
         <variable
-            name="shoeDetails"
+            name="shoeListingsViewModel"
+            type="com.example.shoestore.screens.shoe_listings.ShoeListingsViewModel" />
+        <variable
+            name="shoe"
             type="com.example.shoestore.models.Shoe" />
     </data>
+
+    <!-- Constraint Layout because I prefer to have the items place set in place but still adjust with the size of the screen -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -58,6 +63,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/enter_shoe_name"
+                    android:text="@={shoeListingsViewModel.shoe.name}"
                     android:importantForAutofill="no"
                     android:inputType="textPersonName" />
             </LinearLayout>
@@ -82,6 +88,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="@string/enter_company_name"
+                    android:text="@={shoeListingsViewModel.shoe.company}"
                     android:inputType="textPersonName"
                     android:importantForAutofill="no" />
             </LinearLayout>
@@ -106,6 +113,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="@string/enter_shoe_size"
+                    android:text="@{Double.toString(shoeListingsViewModel.shoe.size)}"
                     android:inputType="numberDecimal"
                     android:importantForAutofill="no" />
             </LinearLayout>
@@ -127,6 +135,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/enter_description"
+                    android:text="@={shoeListingsViewModel.shoe.description}"
                     android:importantForAutofill="no"
                     android:inputType="textMultiLine|text" />
 
