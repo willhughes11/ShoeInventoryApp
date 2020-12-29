@@ -6,7 +6,7 @@
     <data>
         <variable
             name="instructionsViewModel"
-            type="com.example.shoestore.screens.instructions.InstructionsViewModel" />
+            type="com.example.shoestore.screens.instructions.InstructionsFragment" />
     </data>
     
 <androidx.constraintlayout.widget.ConstraintLayout 

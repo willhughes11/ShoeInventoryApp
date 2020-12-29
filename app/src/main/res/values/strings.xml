@@ -11,7 +11,10 @@
     <string name="login_failed">"Login failed"</string>
     <!-- Strings related to onboarding -->
     <string name="next_button">Next</string>
-    <string name="welcome_header">Welcome!</string>
+    <string name="welcome_header">Welcome to the Shoe Inventory App!</string>
     <string name="instructions_header">Instructions</string>
     <string name="previous_button">Previous</string>
+    <string name="shoe_listings">Shoe Listings</string>
+    <string name="add_shoe">Add Shoe</string>
+    <string name="welcome_body">Text View</string>
 </resources>

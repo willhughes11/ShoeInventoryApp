@@ -5,7 +5,7 @@
     <data>
         <variable
             name="welcomeViewModel"
-            type="com.example.shoestore.screens.welcome.WelcomeViewModel" />
+            type="com.example.shoestore.screens.welcome.WelcomeFragment" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,6 +31,23 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/welcome_body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/welcome_body"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/next_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_header"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
