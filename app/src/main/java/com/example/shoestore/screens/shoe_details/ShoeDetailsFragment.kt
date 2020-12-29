@@ -2,31 +2,51 @@ package com.example.shoestore.screens.shoe_details
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.shoestore.R
+import com.example.shoestore.databinding.ShoeDetailsFragmentBinding
+import com.example.shoestore.models.Shoe
 
 class ShoeDetailsFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = ShoeDetailsFragment()
-    }
-
-    private lateinit var viewModel: ShoeDetailsViewModel
-
+    lateinit var viewModel: ShoeDetailsViewModel
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.shoe_details_fragment, container, false)
-    }
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View {
+        super.onCreateView(inflater, container, savedInstanceState)
+        // Inflate the layout for this fragment
+        val binding = DataBindingUtil.inflate<ShoeDetailsFragmentBinding>(inflater, R.layout.shoe_details_fragment, container, false)
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ShoeDetailsViewModel::class.java)
-        // TODO: Use the ViewModel
+        viewModel = ViewModelProvider(requireActivity()).get(ShoeDetailsViewModel::class.java)
+
+        binding.lifecycleOwner = this
+        binding.save.setOnClickListener {
+
+            binding.shoeDetails = Shoe(
+                    binding.shoeName.text.toString(),
+                    binding.shoeSize.text.toString(),
+                    binding.companyName.text.toString(),
+                    binding.description.text.toString()
+            )
+
+            val s = binding.shoeDetails
+            viewModel.saveCurrentDetail(s)
+            view?.findNavController()?.navigate(R.id.action_shoe_details_to_shoe_listings)
+        }
+
+
+        binding.cancel.setOnClickListener {
+
+            view?.findNavController()?.navigate(R.id.action_shoe_details_to_shoe_listings)
+        }
+
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.shoe_details_header)
+        return binding.root
     }
 
 }

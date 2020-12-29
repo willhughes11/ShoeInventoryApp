@@ -59,13 +59,19 @@
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left"
-            app:popUpTo="@id/login_fragment"
+            app:popUpTo="@id/shoe_listings_fragment"
             app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/shoe_details_fragment"
         android:name="com.example.shoestore.screens.shoe_details.ShoeDetailsFragment"
         android:label="shoe_details_fragment"
-        tools:layout="@layout/shoe_details_fragment" />
+        tools:layout="@layout/shoe_details_fragment" >
+        <action
+            android:id="@+id/action_shoe_details_to_shoe_listings"
+            app:destination="@id/shoe_listings_fragment"
+            app:popUpTo="@id/login_fragment"
+            app:popUpToInclusive="false" />
+    </fragment>
 
 </navigation>

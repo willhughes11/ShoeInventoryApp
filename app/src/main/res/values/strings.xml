@@ -4,17 +4,32 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="action_sign_in_short"> Sign in</string>
     <!-- Strings related to onboarding -->
     <string name="next_button">Next</string>
     <string name="welcome_header">Welcome to the Shoe Inventory App!</string>
+    <string name="welcome_body">Here you can store and retrieve shoe information at your leisure.</string>
     <string name="instructions_header">Instructions</string>
     <string name="previous_button">Previous</string>
+    <!-- Strings related to app functionality -->
     <string name="shoe_listings">Shoe Listings</string>
     <string name="add_shoe">Add Shoe</string>
-    <string name="welcome_body">Text View</string>
+    <string name="shoe_details_header">Add Shoe Details</string>
+    <string name="shoe_name">Shoe Name:</string>
+    <string name="enter_shoe_name">Enter Shoe Name</string>
+    <string name="description">Description:</string>
+    <string name="company_name">Company Name:</string>
+    <string name="shoe_size">Shoe Size:</string>
+    <string name="enter_company_name">Enter Company Name</string>
+    <string name="enter_shoe_size">Enter Shoe Size</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="shoe_name_hint">Shoe Name</string>
+    <string name="company_name_hint">Company Name</string>
+    <string name="shoe_size_hint">Shoe Size</string>
+    <string name="description_hint">Description</string>
+    <string name="instructions_step_one">1. Tap the + icon to add a new shoe item to your inventory</string>
+    <string name="instructions_step_two">2. Tap the Save Button to save the shoe to your inventory</string>
+    <string name="logout_menu_item">Logout</string>
 </resources>
